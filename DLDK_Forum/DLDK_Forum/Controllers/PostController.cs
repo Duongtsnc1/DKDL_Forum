@@ -9,7 +9,15 @@ namespace DLDK_Forum.Controllers
     public class PostController : Controller
     {
         // GET: Post
-        public ActionResult Index()
+        public ActionResult ListPost()
+        {
+            return View();
+        }
+        public ActionResult Single_Post()
+        {
+            return View();
+        }
+        public ActionResult NewPost()
         {
             return View();
         }
