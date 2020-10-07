@@ -512,7 +512,7 @@ a {
 }
 
 
-/* footer */
+/*   footer css    */
 
 .footer {
     background: #000;
@@ -522,12 +522,12 @@ a {
     margin-top: 100px;
 }
 
-.footer .container {
-    max-width: 1300px;
-    margin: auto;
-    padding-right: 25px;
-    padding-left: 25px;
-}
+    .footer .container {
+        max-width: 1300px;
+        margin: auto;
+        padding-right: 25px;
+        padding-left: 25px;
+    }
 
 .row {
     display: flex;
@@ -558,9 +558,9 @@ a {
     text-align: center;
 }
 
-.footer-col-2 img {
-    width: 100%;
-}
+    .footer-col-2 img {
+        width: 100%;
+    }
 
 .footer-col-1 img {
     width: 180px;
@@ -580,7 +580,6 @@ ul {
 .app-logo {
     margin-top: 20px;
 }
-
 .app-logo img {
     width: 140px;
 }

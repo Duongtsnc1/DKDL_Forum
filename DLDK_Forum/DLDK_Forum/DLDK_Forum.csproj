@@ -147,6 +147,7 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\css\account.css" />
     <Content Include="Content\css\contact.css" />
+    <Content Include="Content\css\Layout.css" />
     <Content Include="Content\css\list_post.css" />
     <Content Include="Content\css\about.css" />
     <Content Include="Content\css\new_post.css" />
@@ -1910,17 +1911,22 @@
     </Content>
     <Content Include="Views\Web.config" />
     <Content Include="Views\_ViewStart.cshtml" />
-    <Content Include="Views\Shared\Error.cshtml" />
-    <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Home\Login_Logout.cshtml" />
+    <Content Include="Views\Shared\header.cshtml" />
+    <Content Include="Views\Shared\footer.cshtml" />
+    <Content Include="Views\Shared\My_Layout.cshtml" />
+    <Content Include="Views\Home\Home.cshtml" />
+    <Content Include="Views\Home\Account.cshtml" />
+    <Content Include="Views\Post\ListPost.cshtml" />
+    <Content Include="Views\Post\Single_Post.cshtml" />
+    <Content Include="Views\Post\NewPost.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Models\" />
-    <Folder Include="Views\Post\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />

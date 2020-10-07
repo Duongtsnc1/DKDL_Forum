@@ -33,6 +33,12 @@ header {
     z-index: 1000;
 }
 
+header .container {
+    max-width: 100%;
+    width: 100%;
+    padding: 10px;
+}
+
 .header-container {
     max-width: 1300px;
     margin: auto;
@@ -251,7 +257,6 @@ header #logo {
 
 .post-react {
     width: 100%;
-    height: 30%;
     padding: 5px;
     justify-content: center;
     align-items: center;

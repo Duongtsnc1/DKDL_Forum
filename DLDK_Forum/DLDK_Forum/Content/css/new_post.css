@@ -29,7 +29,7 @@ header {
     /* 27c0c0 */
 }
 
-header .container1 {
+header .container {
     background: rgb(108, 236, 209);
     padding: 10px;
     display: block;
@@ -51,25 +51,25 @@ header #logo {
     justify-content: center;
 }
 
-.nav ul li {
-    display: inline-block;
-    padding: 10px 20px;
-}
+    .nav ul li {
+        display: inline-block;
+        padding: 10px 20px;
+    }
 
-.nav ul li a {
-    text-decoration: none;
-    color: #fff;
-}
+        .nav ul li a {
+            text-decoration: none;
+            color: #fff;
+        }
 
-.nav ul li:hover {
-    background: #fff;
-}
+        .nav ul li:hover {
+            background: #fff;
+        }
 
-.nav ul li:hover a {
-    color: #000;
-}
+            .nav ul li:hover a {
+                color: #000;
+            }
 
-.container {
+.container1 {
     max-width: 1300px;
     /* height: 100%; */
     margin: auto;
@@ -80,39 +80,39 @@ header #logo {
     padding: 40px 0;
 }
 
-.container h1 {
-    font-size: 80px;
-    /* font-weight: bold; */
-    /* font-weight: 900!important; */
-    margin-bottom: 40px;
-    text-align: center;
-}
+    .container1 h1 {
+        font-size: 80px;
+        /* font-weight: bold; */
+        /* font-weight: 900!important; */
+        margin-bottom: 40px;
+        text-align: center;
+    }
 
-.container p {
-    font-size: 20px;
-    text-align: center;
-    color: #555;
-    margin-bottom: 30px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
+    .container1 p {
+        font-size: 20px;
+        text-align: center;
+        color: #555;
+        margin-bottom: 30px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
 
-.container ul {
-    list-style-type: none;
-    width: 700px;
-    /* margin: auto; */
-    /* display: flex; */
-    /* flex-direction: column;
+    .container1 ul {
+        list-style-type: none;
+        width: 700px;
+        /* margin: auto; */
+        /* display: flex; */
+        /* flex-direction: column;
     justify-content: center; */
-}
+    }
 
-.container ul li {
-    display: flex;
-    flex-direction: column;
-    /* justify-content: space-between; */
-    margin-bottom: 20px;
-}
+        .container1 ul li {
+            display: flex;
+            flex-direction: column;
+            /* justify-content: space-between; */
+            margin-bottom: 20px;
+        }
 
 input {
     padding: 10px 15px 5px 15px;
@@ -122,14 +122,14 @@ input {
     /* border-radius: 20px; */
 }
 
-input:focus,
-input:active,
-input:checked {
-    border: none;
-    border-bottom: 2px solid rgb(0, 137, 250);
-    box-shadow: 10px 10px 5px rgb(0, 137, 250);
-    outline: none;
-}
+    input:focus,
+    input:active,
+    input:checked {
+        border: none;
+        border-bottom: 2px solid rgb(0, 137, 250);
+        box-shadow: 10px 10px 5px rgb(0, 137, 250);
+        outline: none;
+    }
 
 textarea {
     width: 700px;
@@ -160,10 +160,10 @@ label {
     text-decoration: none;
 }
 
-.btn:hover {
-    padding: 10px 40px;
-    color: #fff;
-}
+    .btn:hover {
+        padding: 10px 40px;
+        color: #fff;
+    }
 
 select {
     height: 50px;
@@ -172,9 +172,9 @@ select {
     border-bottom: 2px solid rgb(0, 137, 250);
 }
 
-select option {
-    margin-top: 20px;
-}
+    select option {
+        margin-top: 20px;
+    }
 
 .footer {
     background: #000;
@@ -184,12 +184,12 @@ select option {
     margin-top: 100px;
 }
 
-.footer .container3 {
-    max-width: 1300px;
-    margin: auto;
-    padding-right: 25px;
-    padding-left: 25px;
-}
+    .footer .container {
+        max-width: 1300px;
+        margin: auto;
+        padding-right: 25px;
+        padding-left: 25px;
+    }
 
 .row {
     display: flex;
@@ -220,9 +220,9 @@ select option {
     text-align: center;
 }
 
-.footer-col-2 img {
-    width: 100%;
-}
+    .footer-col-2 img {
+        width: 100%;
+    }
 
 .footer-col-1 img {
     width: 180px;
@@ -243,9 +243,9 @@ ul {
     margin-top: 20px;
 }
 
-.app-logo img {
-    width: 140px;
-}
+    .app-logo img {
+        width: 140px;
+    }
 
 .footer hr {
     border: none;

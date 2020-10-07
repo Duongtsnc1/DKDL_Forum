@@ -1,0 +1,251 @@
+﻿
+@{
+    ViewBag.Title = "Home";
+}
+<link href="~/Content/css/style.css" rel='stylesheet' type='text/css' />
+<link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="~/Content/fontawesome-free-5.14.0-web/css/all.css">
+<meta charset="UTF-8">
+<meta name="viewport" topic="width=device-width, initial-scale=1.0">
+<title>DLDK TRIP | Trang chủ</title>
+<link rel="icon" href="http://example.com/favicon.png">
+
+<section>
+    @Html.Partial("~/Views/Shared/header.cshtml")
+    <div class="content-header">
+        <h1>Dream</h1>
+        <h1>Trip</h1>
+    </div>
+</section>
+
+<div class="container" style="width: 100%; height: 400px;background: #fff;">
+    <div class="content">
+        <h1>Chào mừng bạn đến với chúng tôi</h1>
+        <h4>Hãy khám phá giấc mơ du lịch của bạn </h4>
+        <p> Và nói cho chúng tôi biết trải nghiệm của bạn</p>
+    </div>
+</div>
+
+<div class="container">
+    <div class="title-test">
+        <video autoplay loop muted plays-inline id="backvideo">
+            <source src="~/Content/image/section1.mp4" type="video/mp4">
+        </video>
+        <h3 class="section">Địa điểm <span>không thể bỏ qua</span></h3>
+    </div>
+    <div class="container1">
+        <div class="box1" onclick="window.open('list_post.html','_blank')">
+            <div class="topic">
+                <h3>Hà Nội</h3>
+            </div>
+        </div>
+        <div class="box1" onclick="window.open('list_post.html','_blank')">
+            <div class="topic">
+                <h3>Thành phố Hồ Chí Minh</h3>
+            </div>
+        </div>
+        <div class="box1" onclick="window.open('list_post.html','_blank')">
+            <div class="topic">
+                <h3>Huế - Đà Nẵng - Quảng Nam</h3>
+            </div>
+        </div>
+        <div class="box1" onclick="window.open('list_post.html','_blank')">
+            <div class="topic">
+                <h3>Miền Tây</h3>
+
+            </div>
+        </div>
+        <div class="box1" onclick="window.open('list_post.html','_blank')">
+            <div class="topic">
+                <h3>Sapa</h3>
+
+            </div>
+        </div>
+        <div class="box1" onclick="window.open('list_post.html','_blank')">
+            <div class="topic">
+                <h3>Đà Lạt</h3>
+
+            </div>
+        </div>
+        <div class="box1" onclick="window.open('list_post.html','_blank')">
+            <div class="topic">
+                <h3>Nha Trang</h3>
+
+            </div>
+        </div>
+        <div class="box1" onclick="window.open('list_post.html','_blank')">
+            <div class="topic">
+                <h3>Phú Quốc</h3>
+
+            </div>
+        </div>
+        <div class="box1" onclick="window.open('list_post.html','_blank')">
+            <div class="topic">
+                <h3>Điểm du lịch khác</h3>
+
+            </div>
+        </div>
+        <div class="box1" onclick="window.open('list_post.html','_blank')">
+            <div class="topic">
+                <h3>Quảng Ninh</h3>
+
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="wrapper">
+        <h4>“Một khi bị nhiễm niềm đam mê du lịch, chẳng có phương thuốc nào có thể hóa giải, và tôi biết rằng tôi sẽ hạnh phúc khi có căn bệnh này cho đến hết cuộc đời.”</h4>
+    </div>
+</div>
+<div class="container" style="background: rgb(206, 242, 245);">
+    <div class="title3">
+        <h2>HOT</h2>
+        <h3>POST</h3>
+    </div>
+    <div class="hot-post">
+        <div class="course">
+            <div class="preview">
+
+                <h2>Hạ Long</h2>
+                <a href="list_post.html">View all</a>
+            </div>
+            <div class="info">
+                <h6>20 tháng 2 2020</h6>
+                <h2>Hạ Long điểm đến không thể bỏ qua</h2>
+                <p class="trunc">Đường vào tim em ôi băng giá trời mùa đông mây vẫn hay đi về vẫn mưa mưa rơi trên đường thầm thì vì đâu mữa em không tới </p>
+                <a href="single_blog.html" class="btn">Đọc thêm</a>
+            </div>
+        </div>
+        <div class="course">
+            <div class="info">
+
+                <h6>20 tháng 2 2020</h6>
+                <h2>Quảng Ninh vùng đất đầy nắng và gió</h2>
+                <p class="trunc">Đường vào tim em ôi băng giá trời mùa đông mây vẫn hay đi về vẫn mưa mưa rơi trên đường thầm thì vì đâu mữa em không tới </p>
+
+                <a href="single_blog.html" class="btn">Đọc thêm</a>
+            </div>
+            <div class="preview">
+
+                <h2>Quảng Ninh</h2>
+                <a href="list_post.html">View all</a>
+            </div>
+        </div>
+        <div class="course">
+            <div class="preview">
+
+                <h2>Phú Quốc</h2>
+                <a href="list_post.html">View all</a>
+            </div>
+            <div class="info">
+
+                <h6>20 tháng 2 2020</h6>
+                <h2>Phú Quốc, Beautiful Island</h2>
+                <p class="trunc">Đường vào tim em ôi băng giá trời mùa đông mây vẫn hay đi về vẫn mưa mưa rơi trên đường thầm thì vì đâu mữa em không tới </p>
+                <a href="single_blog.html" class="btn">Đọc thêm</a>
+            </div>
+        </div>
+        <div class="course">
+            <div class="info">
+
+                <h6>20 tháng 2 2020</h6>
+                <h2>Miền Tây sông nước </h2>
+                <p class="trunc">Đường vào tim em ôi băng giá trời mùa đông mây vẫn hay đi về vẫn mưa mưa rơi trên đường thầm thì vì đâu mữa em không tới </p>
+
+                <a href="single_blog.html" class="btn">Đọc thêm</a>
+            </div>
+            <div class="preview">
+
+                <h2>Miền Tây</h2>
+                <a href="list_post.html">View all</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="container">
+    <div class="hot-account-container">
+        <div class="title2">
+            <h1>Tài khoản</h1>
+            <h3>
+                Nhiều tương tác
+            </h3>
+        </div>
+        <div class="hot-account">
+            <div class="single-box" onclick="window.open('account.html','_blank')">
+                <div class=" header-area img1 "></div>
+                <div class="body-area ">
+                    <h3>Lee Ling</h3>
+
+                    <p class="pro-texrt ">
+                        Mị còn trẻ mị muốn đi chơi thanh xuân sao phải nghỉ nghơi.
+                    </p>
+                    <p>
+                        <i class="fab fa-facebook "></i>
+                        <i class="fab fa-instagram "></i>
+                        <i class="fab fa-twitter "></i>
+                        <i class="fab fa-youtube "></i>
+                    </p>
+                </div>
+            </div>
+            <div class="single-box" onclick="window.open('account.html','_blank')">
+
+                <div class="header-area img2 "></div>
+                <div class="body-area ">
+                    <h3>Lee Ling</h3>
+
+                    <p class="pro-texrt ">
+                        Mị còn trẻ mị muốn đi chơi thanh xuân sao phải nghỉ nghơi.
+                    </p>
+                    <p>
+                        <i class="fab fa-facebook "></i>
+                        <i class="fab fa-instagram "></i>
+                        <i class="fab fa-twitter "></i>
+                        <i class="fab fa-youtube "></i>
+                    </p>
+                </div>
+            </div>
+            <div class="single-box" onclick="window.open('account.html','_blank')">
+
+                <div class="header-area img2 "></div>
+                <div class="body-area ">
+                    <h3>Lee Ling</h3>
+
+                    <p class="pro-texrt ">
+                        Mị còn trẻ mị muốn đi chơi thanh xuân sao phải nghỉ nghơi.
+                    </p>
+                    <p>
+                        <i class="fab fa-facebook "></i>
+                        <i class="fab fa-instagram "></i>
+                        <i class="fab fa-twitter "></i>
+                        <i class="fab fa-youtube "></i>
+                    </p>
+                </div>
+            </div>
+            <div class="single-box" onclick="window.open('account.html','_blank')">
+
+                <div class="header-area img3 "></div>
+                <div class="body-area ">
+                    <h3>Lee Ling</h3>
+
+                    <p class="pro-texrt ">
+                        Mị còn trẻ mị muốn đi chơi thanh xuân sao phải nghỉ nghơi.
+                    </p>
+                    <p>
+                        <i class="fab fa-facebook "></i>
+                        <i class="fab fa-instagram "></i>
+                        <i class="fab fa-twitter "></i>
+                        <i class="fab fa-youtube "></i>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- <div style="width:100px;height: 100px;background:#123456; "></div> -->
+</div>
+
+@Html.Partial("~/Views/Shared/footer.cshtml")

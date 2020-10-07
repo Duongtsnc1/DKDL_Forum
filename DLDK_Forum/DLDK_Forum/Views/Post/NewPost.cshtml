@@ -1,0 +1,63 @@
+﻿@{
+    ViewBag.Title = "ListPost";
+    Layout = null;
+}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DLDK TRIP | Bài viết mới</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Work+Sans">
+    <link rel="stylesheet" href="~/Content/css/new_post.css">
+</head>
+
+
+<body>
+    @Html.Partial("~/Views/Shared/header.cshtml")
+    <div class="main">
+        <div class="container1">
+            <h1>Viết nên trải nghiệm của bạn</h1>
+            <p>“Một khi bị nhiễm niềm đam mê du lịch, chẳng có phương thuốc nào có thể hóa giải, và tôi biết rằng tôi sẽ hạnh phúc khi có căn bệnh này cho đến hết cuộc đời.”</p>
+            <ul>
+                <li>
+
+                    <select name="topic" id="topics">
+                        <option value="0">Chủ đề...</option>
+                        <option value="1">Hà Nội</option>
+                        <option value="2">Thành Phố Hồ Chí Minh</option>
+                        <option value="3">Sapa</option>
+                        <option value="4">Miền Tây</option>
+                        <option value="5">Nha Trang</option>
+                        <option value="6">Đà Lạt</option>
+                        <option value="7">Huế-Đà Nẵng-Quảng Nam</option>
+                        <option value="8">Phú Quốc</option>
+                        <option value="9">Ninh Bình</option>
+                        <option value="10">Khác</option>
+                    </select>
+
+                </li>
+                <li>
+                    <label for="title">Tiêu đề</label> <input type="text" name="title">
+                </li>
+                <li>
+                    <label for="sub-title">Tiêu đề con</label> <input type="text" name="sub-title">
+
+                </li>
+                <li>
+                    <label for="image-post">Ảnh(url)</label> <input type="text" name="image-post">
+                </li>
+                <li>
+                    <label for="content">Nội dung</label> <textarea name="content" id="" cols="30" rows="10"></textarea>
+                </li>
+            </ul>
+            <a href="" class="btn">Thêm </a>
+        </div>
+
+    </div>
+    @Html.Partial("~/Views/Shared/footer.cshtml")
+
+</body>
+
+</html>
