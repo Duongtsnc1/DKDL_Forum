@@ -148,8 +148,8 @@
     <Content Include="Content\css\account.css" />
     <Content Include="Content\css\contact.css" />
     <Content Include="Content\css\Layout.css" />
-    <Content Include="Content\css\list_post.css" />
     <Content Include="Content\css\about.css" />
+    <Content Include="Content\css\list_post.css" />
     <Content Include="Content\css\new_post.css" />
     <Content Include="Content\css\login_logout.css" />
     <Content Include="Content\css\single_blog.css" />
