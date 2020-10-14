@@ -35,65 +35,7 @@
         </video>
         <h3 class="section">Địa điểm <span>không thể bỏ qua</span></h3>
     </div>
-    <div class="container1">
-        <div class="box1" onclick="window.open('list_post.html','_blank')">
-            <div class="topic">
-                <h3>Hà Nội</h3>
-            </div>
-        </div>
-        <div class="box1" onclick="window.open('list_post.html','_blank')">
-            <div class="topic">
-                <h3>Thành phố Hồ Chí Minh</h3>
-            </div>
-        </div>
-        <div class="box1" onclick="window.open('list_post.html','_blank')">
-            <div class="topic">
-                <h3>Huế - Đà Nẵng - Quảng Nam</h3>
-            </div>
-        </div>
-        <div class="box1" onclick="window.open('list_post.html','_blank')">
-            <div class="topic">
-                <h3>Miền Tây</h3>
-
-            </div>
-        </div>
-        <div class="box1" onclick="window.open('list_post.html','_blank')">
-            <div class="topic">
-                <h3>Sapa</h3>
-
-            </div>
-        </div>
-        <div class="box1" onclick="window.open('list_post.html','_blank')">
-            <div class="topic">
-                <h3>Đà Lạt</h3>
-
-            </div>
-        </div>
-        <div class="box1" onclick="window.open('list_post.html','_blank')">
-            <div class="topic">
-                <h3>Nha Trang</h3>
-
-            </div>
-        </div>
-        <div class="box1" onclick="window.open('list_post.html','_blank')">
-            <div class="topic">
-                <h3>Phú Quốc</h3>
-
-            </div>
-        </div>
-        <div class="box1" onclick="window.open('list_post.html','_blank')">
-            <div class="topic">
-                <h3>Điểm du lịch khác</h3>
-
-            </div>
-        </div>
-        <div class="box1" onclick="window.open('list_post.html','_blank')">
-            <div class="topic">
-                <h3>Ninh Bình</h3>
-
-            </div>
-        </div>
-    </div>
+    @Html.Action("List_Post","Home")
 </div>
 <div class="container">
     <div class="wrapper">
@@ -168,85 +110,7 @@
 
 
 <div class="container">
-    <div class="hot-account-container">
-        <div class="title2">
-            <h1>Tài khoản</h1>
-            <h3>
-                Nhiều tương tác
-            </h3>
-        </div>
-        <div class="hot-account">
-            <div class="single-box" onclick="window.open('account.html','_blank')">
-                <div class=" header-area img1 "></div>
-                <div class="body-area ">
-                    <h3>Lee Ling</h3>
-
-                    <p class="pro-texrt ">
-                        Mị còn trẻ mị muốn đi chơi thanh xuân sao phải nghỉ nghơi.
-                    </p>
-                    <p>
-                        
-                        <i class="fab fa-facebook "></i>
-                        <i class="fab fa-instagram "></i>
-                        <i class="fab fa-twitter "></i>
-                        <i class="fab fa-youtube "></i>
-                    </p>
-                </div>
-            </div>
-            <div class="single-box" onclick="window.open('account.html','_blank')">
-
-                <div class="header-area img2 "></div>
-                <div class="body-area ">
-                    <h3>Lee Ling</h3>
-
-                    <p class="pro-texrt ">
-                        Mị còn trẻ mị muốn đi chơi thanh xuân sao phải nghỉ nghơi.
-                    </p>
-                    <p>
-                        <i class="fab fa-facebook "></i>
-                        <i class="fab fa-instagram "></i>
-                        <i class="fab fa-twitter "></i>
-                        <i class="fab fa-youtube "></i>
-                    </p>
-                </div>
-            </div>
-            <div class="single-box" onclick="window.open('account.html','_blank')">
-
-                <div class="header-area img2 "></div>
-                <div class="body-area ">
-                    <h3>Lee Ling</h3>
-
-                    <p class="pro-texrt ">
-                        Mị còn trẻ mị muốn đi chơi thanh xuân sao phải nghỉ nghơi.
-                    </p>
-                    <p>
-                        <i class="fab fa-facebook "></i>
-                        <i class="fab fa-instagram "></i>
-                        <i class="fab fa-twitter "></i>
-                        <i class="fab fa-youtube "></i>
-                    </p>
-                </div>
-            </div>
-            <div class="single-box" onclick="window.open('account.html','_blank')">
-
-                <div class="header-area img3 "></div>
-                <div class="body-area ">
-                    <h3>Lee Ling</h3>
-
-                    <p class="pro-texrt ">
-                        Mị còn trẻ mị muốn đi chơi thanh xuân sao phải nghỉ nghơi.
-                    </p>
-                    <p>
-                        <i class="fab fa-facebook "></i>
-                        <i class="fab fa-instagram "></i>
-                        <i class="fab fa-twitter "></i>
-                        <i class="fab fa-youtube "></i>
-                    </p>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- <div style="width:100px;height: 100px;background:#123456; "></div> -->
+    @Html.Action("HotAccount","Home")
 </div>
 
 @Html.Partial("~/Views/Shared/footer.cshtml")

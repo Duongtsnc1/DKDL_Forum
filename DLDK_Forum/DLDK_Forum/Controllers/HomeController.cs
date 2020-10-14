@@ -28,5 +28,13 @@ namespace DLDK_Forum.Controllers
         {
             return View();
         }
+        public ActionResult List_Post()
+        {
+            return View();
+        }
+        public ActionResult HotAccount()
+        {
+            return View();
+        } 
     }
 }

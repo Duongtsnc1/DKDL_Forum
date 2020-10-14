@@ -150,6 +150,9 @@
     <Compile Include="Models\BinhLuan.cs" />
     <Compile Include="Models\CamXuc.cs" />
     <Compile Include="Models\ChuDe.cs" />
+    <Compile Include="Models\Function\BaiVietDAO.cs" />
+    <Compile Include="Models\Function\ChuDeDAO.cs" />
+    <Compile Include="Models\Function\NguoiDungDAO.cs" />
     <Compile Include="Models\MyDB.cs" />
     <Compile Include="Models\NguoiDung.cs" />
     <Compile Include="Models\PhanHoi.cs" />
@@ -1939,6 +1942,9 @@
     <Content Include="Views\Post\ListPost.cshtml" />
     <Content Include="Views\Post\Single_Post.cshtml" />
     <Content Include="Views\Post\NewPost.cshtml" />
+    <Content Include="Views\Home\List_Post.cshtml" />
+    <Content Include="Views\Post\TableOfContents.cshtml" />
+    <Content Include="Views\Home\HotAccount.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

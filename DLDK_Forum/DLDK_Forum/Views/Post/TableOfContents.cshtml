@@ -1,0 +1,15 @@
+﻿@model IEnumerable<DLDK_Forum.Models.ChuDe>
+@{
+    Layout = null;
+}
+
+<div class="table-content">
+    <ul>
+        @foreach (var item in Model)
+        {
+            <li>
+                <a href="/Post/ListPost?idChuDe=@item.MaChuDe">@item.TenChuDe</a>
+            </li>
+        }
+    </ul>
+</div>
