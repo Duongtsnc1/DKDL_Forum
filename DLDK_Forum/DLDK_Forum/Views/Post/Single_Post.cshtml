@@ -1,5 +1,8 @@
-﻿@{
+﻿
+@model DLDK_Forum.Models.BaiViet
+@{
     Layout = null;
+    var noidung = Model.Noidung.Split('\n');
 }
 <!DOCTYPE html>
 <html lang="en">
@@ -14,13 +17,13 @@
 </head>
 
 <body>
-
+    
     <div class="title_container">
         @Html.Partial("~/Views/Shared/header.cshtml")
         <div class="title">
             <div class="title1">
-                <span>20.09.2020 <span>•</span>By Bùi Văn Dương</span>
-                <h1>Hạ Long điểm du lịch không thể bỏ qua</h1>
+                <span>@Model.ThoiGian.Day . @Model.ThoiGian.Month . @Model.ThoiGian.Year<span>•</span>By @Model.NguoiDung.HoTen </span>
+                <h1>@Model.TieuDe</h1>
             </div>
         </div>
     </div>
@@ -28,32 +31,13 @@
     <div class="content">
         <div class="row">
             <div class="col-1">
-                <p class="sub-title">
-                    Hạ Long quần đảo của những con rồng nơi đất Việt
-                </p><br>
-                <p>
-                    Trước kia, vịnh Hạ Long ( Quảng Ninh) đã được danh nhân văn hóa Nguyễn Trãi đánh giá là ” kỳ quan đất dựng giữa trời cao”. Ngày nay, vịnh Hạ Long đã từng nhiều lần được UNESCO công nhận là di sản thiên nhiên thế giới bởi vẻ đẹp kỳ vĩ và
-                    sống động mà tạo hóa mang lại và đặc biệt thu hút rất nhiều du khách đến từ mọi miền trong và ngoài nước. Có lẽ không ai có thể phủ nhận rằng mỗi khi nói đến vịnh Hạ Long, trước hết người ta sẽ nghĩ ngay đến vẻ đẹp thần tiên của non
-                    nước mây trời nơi đây như một tác phẩm nghệ thuật tạo hình vĩ đại của thiên nhiên với sự hiện diện của hàng nghìn đảo đá muôn hình vạn trạng cùng rất nhiều hang động kỳ thú quần tụ thành một thế giới vừa sinh động vừa huyền bí.
-                </p><br>
-                <p>
-                    Nhìn từ trên cao, vịnh Hạ Long đẹp tựa một bức tranh thủy mặc khổng lồ vô cùng sống động với hàng ngàn đảo đá. Có chỗ thì quây quần, có chỗ lại tách rời riêng biệt tạo những nét chấm phá cực kỳ tài nghệ. Có thể nói vịnh Hạ Long vẫn luôn
-                    đẹp như chính cái tên của mình- một kỳ quan thiên nhiên thế giới – niềm tự hào của quê hương Việt Nam.
-                </p><br>
-                <p>
-                    Dường như nhờ bàn tay khéo léo, tài hoa của tạo hóa, các đảo đá vô tri, tĩnh lặng ở Hạ Long trở thành những nhân vật sống động, thân thuộc với con người. Đảo thì giống như đôi gà bên nhau chờn vờn trên sóng nước (hòn Trống Mái), đảo lại
-                    giống một chú rùa khổng lồ lim dim ngủ (hòn Rùa) hay như một vị sư già đang chắp tay hướng ra mặt biển tụng kinh niệm Phật (hòn Ông Sư). Bên cạnh đó, có đảo lại giống như một chiếc lư hương khổng lồ đứng giữa biển khơi như để cúng
-                    tế trời đất (hòn Đỉnh Hương) và còn nhiều, nhiều đảo khác có hình dáng quen thuộc mà chúng ta còn chưa có dịp khám phá hết những bí mật thần kỳ ẩn trong chúng.
-                </p><br>
-                <p>Một sự khác biệt ở Hạ Long đó là biển ở đây suốt bốn mùa đều mang một màu xanh đằm thắm. Vào mùa xuân giữa sóng nước mênh mông trong làn sương bạc che phủ, những đảo đá trở nên uyển chuyển mềm mại, bồng bềnh trên sóng nước.</p><br>
-                <p>
-                    Vào mùa hè, khi ánh bình minh ló rạng nơi chân trời, những đảo đá như vươn dậy từ mặt nước bao la. Toàn vịnh mang một màu đỏ rực chuyển dần sang màu xanh lam với những gợn sóng lăn tăn ánh bạc đua nhau lướt trên mặt vịnh xô vào bờ. Xung
-                    quanh đó những loài phong lan và cây cỏ vươn ra từ kẽ đá, rực rỡ đơm hoa tô điểm cho Hạ Long thêm xinh đẹp rạng ngời.
-                </p><br>
-                <p>
-                    Vẻ đẹp của Hạ Long không chỉ được phơi bày ở dáng núi, sắc nước mây trời mà còn nằm ẩn chứa trong lòng các đảo đá, với một hệ thống hang động vô cùng phong phú tập trung ở vùng trung tâm của di sản. Động Thiên Cung nguy nga lộng lẫy, hang
-                    Đầu Gỗ khỏe khoắn, hang Sửng Sốt thì kín đáo thâm trầm…
-                </p><br>
+                <br>
+                @foreach(var item in noidung)
+                {
+                    <p>@item</p>
+                    <br>
+                }
+                <br>
                 <hr>
                 <div class="comment-container">
                     <div class="post-react">
@@ -64,75 +48,23 @@
                         </div>
                     </div>
                     <div class="count-container">
-                        <p>6 Bình Luận</p>
+                        <p>@Model.BinhLuans.Count()Bình luận</p>
                     </div>
                     <ul>
-                        <li class="comment">
-                            <div class="avt-user">
-                                <img src="~/Content/image/avt2.jpg" alt="">
-                            </div>
-                            <div class="comment-body">
-                                <h4>Hoàng Thuỳ Linh</h4>
-                                <span>11:20 22.09.2020</span>
-                                <p>Bạn ơi cho mình hỏi với, đi chơi hạ long thì khoảng bao nhiêu ngày là ok v ạ. Mình cảm ơn </p>
-                                <p class="btn">Trả lời</p>
-                            </div>
-                        </li>
-                        <li class="comment">
-                            <div class="avt-user">
-                                <img src="~/Content/image/avt2.jpg" alt="">
-                            </div>
-                            <div class="comment-body">
-                                <h4>Hoàng Thuỳ Linh</h4>
-                                <span>11:20 22.09.2020</span>
-                                <p>Bạn ơi cho mình hỏi với, đi chơi hạ long thì khoảng bao nhiêu ngày là ok v ạ. Mình cảm ơn </p>
-                                <p class="btn">Trả lời</p>
-                            </div>
-                        </li>
-                        <li class="comment">
-                            <div class="avt-user">
-                                <img src="~/Content/image/avt2.jpg" alt="">
-                            </div>
-                            <div class="comment-body">
-                                <h4>Hoàng Thuỳ Linh</h4>
-                                <span>11:20 22.09.2020</span>
-                                <p>Bạn ơi cho mình hỏi với, đi chơi hạ long thì khoảng bao nhiêu ngày là ok v ạ. Mình cảm ơn </p>
-                                <p class="btn">Trả lời</p>
-                            </div>
-                        </li>
-                        <li class="comment">
-                            <div class="avt-user">
-                                <img src="~/Content/image/avt2.jpg" alt="">
-                            </div>
-                            <div class="comment-body">
-                                <h4>Hoàng Thuỳ Linh</h4>
-                                <span>11:20 22.09.2020</span>
-                                <p>Bạn ơi cho mình hỏi với, đi chơi hạ long thì khoảng bao nhiêu ngày là ok v ạ. Mình cảm ơn </p>
-                                <p class="btn">Trả lời</p>
-                            </div>
-                        </li>
-                        <li class="comment">
-                            <div class="avt-user">
-                                <img src="~/Content/image/avt2.jpg" alt="">
-                            </div>
-                            <div class="comment-body">
-                                <h4>Hoàng Thuỳ Linh</h4>
-                                <span>11:20 22.09.2020</span>
-                                <p>Bạn ơi cho mình hỏi với, đi chơi hạ long thì khoảng bao nhiêu ngày là ok v ạ. Mình cảm ơn </p>
-                                <p class="btn">Trả lời</p>
-                            </div>
-                        </li>
-                        <li class="comment">
-                            <div class="avt-user">
-                                <img src="~/Content/image/avt2.jpg" alt="">
-                            </div>
-                            <div class="comment-body">
-                                <h4>Hoàng Thuỳ Linh</h4>
-                                <span>11:20 22.09.2020</span>
-                                <p>Bạn ơi cho mình hỏi với, đi chơi hạ long thì khoảng bao nhiêu ngày là ok v ạ. Mình cảm ơn </p>
-                                <p class="btn">Trả lời</p>
-                            </div>
-                        </li>
+                        @foreach (var item in Model.BinhLuans)
+                        {
+                            <li class="comment">
+                                <div class="avt-user">
+                                    <img src="~/images/avt.jpg" alt="">
+                                </div>
+                                <div class="comment-body">
+                                    <h4>@item.NguoiDung.HoTen</h4>
+                                    <span>@item.ThoiGian.ToString()</span>
+                                    <p>@item.NoiDung</p>
+                                    <p class="btn">Trả lời</p>
+                                </div>
+                            </li>
+                        }
                     </ul>
                     <hr>
                     <div class="new-comment">

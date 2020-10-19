@@ -155,6 +155,8 @@
     <Compile Include="Models\Function\NguoiDungDAO.cs" />
     <Compile Include="Models\MyDB.cs" />
     <Compile Include="Models\NguoiDung.cs" />
+    <Compile Include="Models\N_models\HotPost.cs" />
+    <Compile Include="Models\N_models\NguoiDung_BaiViet.cs" />
     <Compile Include="Models\PhanHoi.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -1853,6 +1855,7 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="images\avt.jpg" />
     <Content Include="images\Ha_long_1.jpg" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -1942,9 +1945,11 @@
     <Content Include="Views\Post\ListPost.cshtml" />
     <Content Include="Views\Post\Single_Post.cshtml" />
     <Content Include="Views\Post\NewPost.cshtml" />
-    <Content Include="Views\Home\List_Post.cshtml" />
+    <Content Include="Views\Home\List_Topic.cshtml" />
     <Content Include="Views\Post\TableOfContents.cshtml" />
     <Content Include="Views\Home\HotAccount.cshtml" />
+    <Content Include="Views\Home\tesst.cshtml" />
+    <Content Include="Views\Home\HotBaiViet.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

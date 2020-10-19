@@ -1,0 +1,9 @@
+﻿@model IEnumerable<DLDK_Forum.Models.N_models.NguoiDung_BaiViet>
+@{
+    Layout = null;
+}
+@foreach(var item in Model)
+{
+    <p>@item.ID.Email</p>
+    <p>@item.SoLuongBaiViet</p>
+}

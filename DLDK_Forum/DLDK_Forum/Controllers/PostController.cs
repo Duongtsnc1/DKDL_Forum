@@ -25,14 +25,15 @@ namespace DLDK_Forum.Controllers
             List<ChuDe> Topics = MyDBContext.ChuDes.ToList();
             return View(Topics);
         }
-        public ActionResult Single_Post()
+        public ActionResult Single_Post(string idPost)
         {
-            return View();
+            var BaiViet = MyDBContext.BaiViets.SingleOrDefault(s => s.MaBaiViet == idPost);
+            return View(BaiViet);
         }
         public ActionResult NewPost()
         {
             return View();
         }
-        
+       
     }
 }

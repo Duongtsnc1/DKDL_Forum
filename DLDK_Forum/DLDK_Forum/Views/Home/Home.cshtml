@@ -35,7 +35,7 @@
         </video>
         <h3 class="section">Địa điểm <span>không thể bỏ qua</span></h3>
     </div>
-    @Html.Action("List_Post","Home")
+    @Html.Action("List_Topic","Home")
 </div>
 <div class="container">
     <div class="wrapper">
@@ -47,70 +47,13 @@
         <h2>HOT</h2>
         <h3>POST</h3>
     </div>
-    <div class="hot-post">
-        <div class="course">
-            <div class="preview">
-
-                <h2>Hạ Long</h2>
-                <a href="list_post.html">View all</a>
-            </div>
-            <div class="info">
-                <h6>20 tháng 2 2020</h6>
-                <h2>Hạ Long điểm đến không thể bỏ qua</h2>
-                <p class="trunc">Đường vào tim em ôi băng giá trời mùa đông mây vẫn hay đi về vẫn mưa mưa rơi trên đường thầm thì vì đâu mữa em không tới </p>
-                <a href="single_blog.html" class="btn">Đọc thêm</a>
-            </div>
-        </div>
-        <div class="course">
-            <div class="info">
-
-                <h6>20 tháng 2 2020</h6>
-                <h2>Quảng Ninh vùng đất đầy nắng và gió</h2>
-                <p class="trunc">Đường vào tim em ôi băng giá trời mùa đông mây vẫn hay đi về vẫn mưa mưa rơi trên đường thầm thì vì đâu mữa em không tới </p>
-
-                <a href="single_blog.html" class="btn">Đọc thêm</a>
-            </div>
-            <div class="preview">
-
-                <h2>Quảng Ninh</h2>
-                <a href="list_post.html">View all</a>
-            </div>
-        </div>
-        <div class="course">
-            <div class="preview">
-
-                <h2>Phú Quốc</h2>
-                <a href="list_post.html">View all</a>
-            </div>
-            <div class="info">
-
-                <h6>20 tháng 2 2020</h6>
-                <h2>Phú Quốc, Beautiful Island</h2>
-                <p class="trunc">Đường vào tim em ôi băng giá trời mùa đông mây vẫn hay đi về vẫn mưa mưa rơi trên đường thầm thì vì đâu mữa em không tới </p>
-                <a href="single_blog.html" class="btn">Đọc thêm</a>
-            </div>
-        </div>
-        <div class="course">
-            <div class="info">
-
-                <h6>20 tháng 2 2020</h6>
-                <h2>Miền Tây sông nước </h2>
-                <p class="trunc">Đường vào tim em ôi băng giá trời mùa đông mây vẫn hay đi về vẫn mưa mưa rơi trên đường thầm thì vì đâu mữa em không tới </p>
-
-                <a href="single_blog.html" class="btn">Đọc thêm</a>
-            </div>
-            <div class="preview">
-
-                <h2>Miền Tây</h2>
-                <a href="list_post.html">View all</a>
-            </div>
-        </div>
-    </div>
+    @Html.Action("HotBaiViet", "Home")
 </div>
 
 
 <div class="container">
     @Html.Action("HotAccount","Home")
 </div>
+
 
 @Html.Partial("~/Views/Shared/footer.cshtml")

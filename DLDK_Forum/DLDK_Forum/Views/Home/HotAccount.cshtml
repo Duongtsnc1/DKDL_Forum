@@ -1,4 +1,4 @@
-﻿
+﻿@model IEnumerable<DLDK_Forum.Models.N_models.NguoiDung_BaiViet>
 @{
     Layout = null;
 }
@@ -11,73 +11,20 @@
             </h3>
         </div>
         <div class="hot-account">
-            <div class="single-box" onclick="window.open('account.html','_blank')">
-                <div class=" header-area img1 "></div>
-                <div class="body-area ">
-                    <h3>Lee Ling</h3>
-
-                    <p class="pro-texrt ">
-                        Mị còn trẻ mị muốn đi chơi thanh xuân sao phải nghỉ nghơi.
-                    </p>
-                    <p>
-
-                        <i class="fab fa-facebook "></i>
-                        <i class="fab fa-instagram "></i>
-                        <i class="fab fa-twitter "></i>
-                        <i class="fab fa-youtube "></i>
-                    </p>
+            @foreach (var item in Model)
+            {
+                <div class="single-box" onclick="window.open('account.html','_blank')">
+                    <div class=" header-area img1 " style="background-image: url('/images/avt.jpg');"></div>
+                    <div class="body-area ">
+                        <h3>@item.ID.HoTen</h3>
+                        <p>
+                            <i class="fab fa-facebook "></i>
+                            <i class="fab fa-instagram "></i>
+                            <i class="fab fa-twitter "></i>
+                            <i class="fab fa-youtube "></i>
+                        </p>
+                    </div>
                 </div>
-            </div>
-            <div class="single-box" onclick="window.open('account.html','_blank')">
-
-                <div class="header-area img2 "></div>
-                <div class="body-area ">
-                    <h3>Lee Ling</h3>
-
-                    <p class="pro-texrt ">
-                        Mị còn trẻ mị muốn đi chơi thanh xuân sao phải nghỉ nghơi.
-                    </p>
-                    <p>
-                        <i class="fab fa-facebook "></i>
-                        <i class="fab fa-instagram "></i>
-                        <i class="fab fa-twitter "></i>
-                        <i class="fab fa-youtube "></i>
-                    </p>
-                </div>
-            </div>
-            <div class="single-box" onclick="window.open('account.html','_blank')">
-
-                <div class="header-area img2 "></div>
-                <div class="body-area ">
-                    <h3>Lee Ling</h3>
-
-                    <p class="pro-texrt ">
-                        Mị còn trẻ mị muốn đi chơi thanh xuân sao phải nghỉ nghơi.
-                    </p>
-                    <p>
-                        <i class="fab fa-facebook "></i>
-                        <i class="fab fa-instagram "></i>
-                        <i class="fab fa-twitter "></i>
-                        <i class="fab fa-youtube "></i>
-                    </p>
-                </div>
-            </div>
-            <div class="single-box" onclick="window.open('account.html','_blank')">
-
-                <div class="header-area img3 "></div>
-                <div class="body-area ">
-                    <h3>Lee Ling</h3>
-
-                    <p class="pro-texrt ">
-                        Mị còn trẻ mị muốn đi chơi thanh xuân sao phải nghỉ nghơi.
-                    </p>
-                    <p>
-                        <i class="fab fa-facebook "></i>
-                        <i class="fab fa-instagram "></i>
-                        <i class="fab fa-twitter "></i>
-                        <i class="fab fa-youtube "></i>
-                    </p>
-                </div>
-            </div>
+            }
         </div>
     </div>

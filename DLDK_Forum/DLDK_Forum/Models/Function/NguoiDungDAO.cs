@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using DLDK_Forum.Models;
+using DLDK_Forum.Models.N_models;
 
 namespace DLDK_Forum.Models.Function
 {
@@ -12,11 +14,21 @@ namespace DLDK_Forum.Models.Function
         {
             a = new MyDB();
         }
-        //public IQueryable<NguoiDung> GetHotNguoiDung()
-        //{
-        //    var result = (from ND in a.NguoiDungs join BV in a.BaiViets
-        //                select );
-        //    return result;
-        //}
+        public List<NguoiDung_BaiViet> GetHotNguoiDung()
+        {
+            List<NguoiDung_BaiViet> NDBV = new List<NguoiDung_BaiViet>();
+            var ND = a.NguoiDungs.ToList();
+            NguoiDung_BaiViet tmp;
+            foreach(var item in ND)
+            {
+                tmp=new NguoiDung_BaiViet();
+                tmp.ID = item;
+                tmp.SoLuongBaiViet = item.BaiViets.Count();
+                NDBV.Add(tmp);
+            }
+            NDBV.Sort((a, b) => a.SoLuongBaiViet.CompareTo(b.SoLuongBaiViet));
+            NDBV.Reverse();
+            return NDBV;
+        }
     }
 }
