@@ -10,6 +10,7 @@ namespace DLDK_Forum.Controllers
 {
     public class HomeController : Controller
     {
+        MyDB MyDBContext = new MyDB();
         public ActionResult Login_Logout()
         {
             return View();
@@ -26,9 +27,10 @@ namespace DLDK_Forum.Controllers
         {
             return View();
         }
-        public ActionResult Account()
+        public ActionResult Account(string idAccount)
         {
-            return View();
+            var TaiKhoan = MyDBContext.NguoiDungs.SingleOrDefault(s => s.Email == idAccount);
+            return View(TaiKhoan);
         }
         public ActionResult List_Topic()
         {

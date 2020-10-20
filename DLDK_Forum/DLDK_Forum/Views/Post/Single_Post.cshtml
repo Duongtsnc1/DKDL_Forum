@@ -32,10 +32,9 @@
         <div class="row">
             <div class="col-1">
                 <br>
-                @foreach(var item in noidung)
+                @foreach (var item in noidung)
                 {
-                    <p>@item</p>
-                    <br>
+                        <p>&emsp;@item</p>
                 }
                 <br>
                 <hr>
@@ -48,7 +47,7 @@
                         </div>
                     </div>
                     <div class="count-container">
-                        <p>@Model.BinhLuans.Count()Bình luận</p>
+                        <p>@Model.BinhLuans.Count() Bình luận</p>
                     </div>
                     <ul>
                         @foreach (var item in Model.BinhLuans)
@@ -84,11 +83,11 @@
                     <div class="image-container">
                         <img src="~/Content/image/avt.jpg" alt="">
                     </div>
-                    <h3>Bùi Văn Dương</h3>
+                    <h3>@Model.NguoiDung.HoTen</h3>
                     <hr>
                     <p>Du lịch là một trải nghiệm vô cùng thú vị để bản khám phá thế giới, Thế giới bao la còn bao điều bạn chưa từng khám phá ra, Xách ba lô lên và đi thôi</p>
                     <div class="btn-container">
-                        <a href="account.html" class="btn-add">Xem thêm</a>
+                        <a href="/Home/Account?idAccount=@Model.Email" class="btn-add">Xem thêm</a>
                     </div>
                 </div>
             </div>
