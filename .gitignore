@@ -349,3 +349,4 @@ MigrationBackup/
 # Ionide (cross platform F# VS Code tools) working folder
 .ionide/
 DLDK_Forum/DLDK_Forum/Web.config
+*.config
