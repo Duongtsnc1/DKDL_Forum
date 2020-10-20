@@ -119,9 +119,14 @@
                                 <img src="~/@item.DuongDanHinhAnh" alt="">
                             </div>
                             <div class="post-react">
-                                <div class="i-container"><i  class="far fa-thumbs-up"></i> </div>
-                                <div class="i-container"><i class="far fa-thumbs-down"></i> </div>
-                                <div class="i-container"><i class="far fa-comment"></i></div>
+                                @{
+                                    var Thich_BV = item.CamXucs.Where(s => s.Thich == 1).Count();
+                                    var KThich_BV = item.CamXucs.Where(s => s.Thich == 0).Count();
+                                    var BinhLuan_BV = item.BinhLuans.Count();
+                                }
+                                <div class="i-container"><i class="far fa-thumbs-up"></i><span>@Thich_BV</span> </div>
+                                <div class="i-container"><i class="far fa-thumbs-down"></i> <span>@KThich_BV</span></div>
+                                <div class="i-container"><i class="far fa-comment"></i><span>@BinhLuan_BV</span></div>
                             </div>
                         </div>
                         <div class="post-right">

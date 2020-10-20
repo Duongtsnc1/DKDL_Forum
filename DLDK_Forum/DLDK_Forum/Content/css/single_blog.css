@@ -290,55 +290,31 @@ header #logo {
 .i-container:hover i {
     top: -50%;
 }
+.i-container span {
+    display: none;
+}
 
-.post-react .i-container:nth-child(1)::before {
-    content: "9";
-    font-size: 20px;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+.i-container:hover span {
+    display: block;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    display: none;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 .post-react .i-container:nth-child(1):hover {
     background: rgb(253, 96, 96);
 }
 
-.post-react .i-container:nth-child(2)::before {
-    content: "9";
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: 20px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    display: none;
-}
-
 .post-react .i-container:nth-child(2):hover {
     background: rgb(124, 124, 124);
-}
-
-.post-react .i-container:nth-child(3)::before {
-    content: "29";
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: 20px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    display: none;
 }
 
 .post-react .i-container:nth-child(3):hover {
     background: rgb(116, 151, 218);
 }
 
-.post-react .i-container:hover::before {
-    display: block;
-}
 
 .post-react .i-container:hover i {
     top: -30%;
