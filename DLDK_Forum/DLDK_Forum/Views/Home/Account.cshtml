@@ -2,6 +2,24 @@
 
 @{
     Layout = null;
+    var Thich = 0;
+    var KThich = 0;
+    var BinhLuan = 0;
+    foreach(var item in Model.BaiViets)
+    {
+        Thich+=item.CamXucs.Where(s => s.Thich == 1).Count();
+    }
+
+    foreach(var item in Model.BaiViets)
+    {
+        KThich+=item.CamXucs.Where(s => s.Thich == 0).Count();
+    }
+
+    foreach(var item in Model.BaiViets)
+    {
+        BinhLuan += item.BinhLuans.Count();
+    }
+
 }
 
 
@@ -26,13 +44,13 @@
     <div class="account">
         <div class="back-image">
             <div class="btn-container">
-                <a href="new_post.html" class="btn">VIẾT BÀI MỚI</a>
+                <a href="Post/NewPost" class="btn">VIẾT BÀI MỚI</a>
             </div>
             <div class="btn-container">
-                <a href="index.html" class="btn">Trang chủ</a>
+                <a href="/Home/Home" class="btn">Trang chủ</a>
             </div>
             <div class="btn-container">
-                <a href="manage.html" class="btn">Quản lý(admin)</a>
+                <a href="" class="btn">Quản lý(admin)</a>
             </div>
         </div>
         <div class="info-container">
@@ -86,9 +104,9 @@
                     <hr>
                     <div class="Interactive">
                         <p>@Model.BaiViets.Count() Bài viết</p>
-                        <p>31 Thích</p>
-                        <p>28 Không thích</p>
-                        <p>30 Bình luận</p>
+                        <p>@Thich Thích</p>
+                        <p>@KThich Không thích</p>
+                        <p>@BinhLuan Bình luận</p>
                     </div>
                 </div>
             </div>
@@ -96,7 +114,6 @@
                 @foreach (var item in Model.BaiViets)
                 {
                     <div class="post">
-
                         <div class="post-left">
                             <div class="post-image">
                                 <img src="~/@item.DuongDanHinhAnh" alt="">
@@ -104,10 +121,7 @@
                             <div class="post-react">
                                 <div class="i-container"><i  class="far fa-thumbs-up"></i> </div>
                                 <div class="i-container"><i class="far fa-thumbs-down"></i> </div>
-                                <div class="i-container">
-                                    <i class="far fa-comment"></i>
-
-                                </div>
+                                <div class="i-container"><i class="far fa-comment"></i></div>
                             </div>
                         </div>
                         <div class="post-right">

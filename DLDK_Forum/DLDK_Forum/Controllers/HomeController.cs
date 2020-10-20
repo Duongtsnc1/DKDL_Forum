@@ -44,9 +44,7 @@ namespace DLDK_Forum.Controllers
         public ActionResult HotBaiViet()
         {
             BaiVietDAO DAO = new BaiVietDAO();
-            var hl = DAO.GetHotBaiViets().GetRange(0, 4);
-            
-            return View(hl);
+            return View(DAO.GetHotBaiViets().GetRange(0, 4));
         }
         public ActionResult tesst()
         {
