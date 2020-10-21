@@ -150,6 +150,7 @@
     border: none;
     padding: 10px;
     font-size: 18px;
+    cursor: pointer;
 }
 
 @media (max-width: 991px) {

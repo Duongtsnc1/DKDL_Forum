@@ -48,7 +48,7 @@
                 </div>
             </div>
             <div class="contactForm">
-                <form action="ThemPhanHoi" method="post">
+                <form action="/Home/ThemPhanHoi" method="post">
                     <h2>Nội dung</h2>
                     <div class="inputBox">
                         <input type="text" name="HoTen" required="required">
@@ -64,6 +64,9 @@
                     </div>
                     <div class="inputBox">
                         <input type="submit" name="" value="Gửi">
+                        <div class="result">
+                            <p>@ViewBag.mes</p>
+                        </div>
                     </div>
                 </form>
             </div>
