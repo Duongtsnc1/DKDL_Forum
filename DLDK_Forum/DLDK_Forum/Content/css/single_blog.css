@@ -167,16 +167,20 @@ header #logo {
 .comment {
     display: flex;
     margin-bottom: 50px;
-    border-left: 2px solid #555;
-    border-bottom: 2px solid #555;
-    box-shadow: -10px 10px 10px#555;
-    padding-left: 10px;
+    border-left: 5px solid #555;
+    border-bottom: 5px solid #555;
+    box-shadow: 10px -10px 20px#555;
+    padding: 10px;
 }
 
 .comment-body h4 {
     font-size: 20px;
     margin-bottom: 10px;
     cursor: pointer;
+}
+
+.comment-body {
+    width: 100%;
 }
 
 .comment-body span {

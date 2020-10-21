@@ -13,9 +13,7 @@
     <link rel="stylesheet" type="text/css" href="~/Content/fontawesome-free-5.14.0-web/css/all.css">
     <title>DLDK TRIP | Chủ đề</title>
     @*<link rel="stylesheet" href="~/Content/css/Layout.css">*@
-
 </head>
-
 <body>
     @Html.Partial("~/Views/Shared/header.cshtml")
     <div class="content">
@@ -51,7 +49,7 @@
                                         <p class="month-year">tháng @item.ThoiGian.Month @item.ThoiGian.Year</p>
                                     </div>
                                 </div>
-                                <div class="author" onclick="window.open('account.html','_blank')">
+                                <div class="author" onclick="window.open('/Home/Account?idAccount=@item.Email','_self')">
                                     <img src="~/Content/image/avt.jpg" alt="">
                                     <h4>@item.NguoiDung.HoTen</h4>
                                 </div>

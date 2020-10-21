@@ -17,9 +17,17 @@ namespace DLDK_Forum.Models.Function
 
         public IQueryable<BaiViet> GetBaiViets(string idChuDe)
         {
-            var result = (from s in a.BaiViets
-                           where s.MaChuDe == idChuDe
-                           select s);
+            IQueryable<BaiViet> result;
+            if (idChuDe != "") { 
+                 result = (from s in a.BaiViets
+                               where s.MaChuDe == idChuDe
+                               select s);
+            }
+            else
+            {
+                 result = (from s in a.BaiViets
+                              select s);
+            }
             return result;
         }
         public List<HotPost> GetHotBaiViets()

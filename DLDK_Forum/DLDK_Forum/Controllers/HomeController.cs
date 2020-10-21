@@ -48,8 +48,8 @@ namespace DLDK_Forum.Controllers
         }
         public ActionResult tesst()
         {
-            NguoiDungDAO DAO = new NguoiDungDAO();
-            return View(DAO.GetHotNguoiDung().GetRange(0,4));
+            
+            return View();
 
         }
     }
