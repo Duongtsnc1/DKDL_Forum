@@ -19,6 +19,14 @@ namespace DLDK_Forum.Controllers
         {
             return View();
         }
+        //public ActionResult ThemPhanHoi(PhanHoi model)
+        //{
+        //    PhanHoi tmp = new PhanHoi();
+        //    tmp.Email = model.Email;
+        //    tmp.HoTen = model.HoTen;
+        //    tmp.NoiDung = model.NoiDung;
+        //    return View();
+        //}
         public ActionResult About()
         {
             return View();
