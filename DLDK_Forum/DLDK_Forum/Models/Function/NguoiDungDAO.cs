@@ -30,5 +30,17 @@ namespace DLDK_Forum.Models.Function
             NDBV.Reverse();
             return NDBV;
         }
+        public bool login(string email,string pass)
+        {
+            var result = a.NguoiDungs.SingleOrDefault(s => s.Email == email && s.MatKhau == pass);
+            if (result != null)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
     }
 }

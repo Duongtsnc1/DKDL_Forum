@@ -15,6 +15,24 @@ namespace DLDK_Forum.Controllers
         {
             return View();
         }
+        [HttpPost]
+        public ActionResult Login(NguoiDung model)
+        {
+            ViewBag.mes = "";
+            NguoiDungDAO DAO = new NguoiDungDAO();
+            var result = DAO.login(model.Email, model.MatKhau);
+            if (result == true)
+            {
+                ViewBag.mes = "Thành công";
+                return RedirectToAction("Home");
+            }
+            else
+            {
+                TempData["Error"] = "Tài Khoản Hoặc Mật Khẩu Không Đúng!!!!!!";
+                return RedirectToAction("Login_Logout");
+            } 
+        }
+
         public ActionResult Contact()
         {
             return View();
