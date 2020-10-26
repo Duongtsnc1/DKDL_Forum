@@ -31,6 +31,15 @@ namespace DLDK_Forum.Models
         [StringLength(20)]
         public string MatKhau { get; set; }
 
+        [StringLength(100)]
+        public string AnhDaiDien { get; set; }
+
+        [StringLength(5)]
+        public string GioiTinh { get; set; }
+
+        [StringLength(100)]
+        public string MoTa { get; set; }
+
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<BaiViet> BaiViets { get; set; }
 

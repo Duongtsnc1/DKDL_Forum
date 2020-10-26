@@ -32,6 +32,12 @@ namespace DLDK_Forum.Controllers
                 return RedirectToAction("Login_Logout");
             } 
         }
+        [HttpPost]
+        public ActionResult Register(NguoiDung model)
+        {
+                return RedirectToAction("Login_Logout");
+
+        }
 
         public ActionResult Contact()
         {

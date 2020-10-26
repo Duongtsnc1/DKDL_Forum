@@ -35,30 +35,49 @@ button {
     position: relative;
     width: 640px;
     height: 100px;
-    padding: 50px 30px;
+    /* padding: 50px 30px; */
     -webkit-transition: -webkit-transform 1.2s ease-in-out;
     transition: transform 1.2s ease-in-out;
     transition: transform 1.2s ease-in-out, -webkit-transform 1.2s ease-in-out;
 }
 
-.form h2 {
-    width: 100%;
-    font-size: 20px;
-    text-align: center;
-}
+    .form h2 {
+        width: 100%;
+        font-size: 20px;
+        text-align: center;
+        margin-top: 15px;
+    }
 
-label {
+.label1 {
     display: block;
     width: 260px;
     margin: 25px auto;
     text-align: center;
+    position: relative;
 }
 
-label span {
-    font-size: 14px;
-    font-weight: 600;
-    color: #505f75;
-    text-transform: uppercase;
+    .label1 span {
+        font-size: 14px;
+        font-weight: 600;
+        color: #505f75;
+        text-transform: uppercase;
+    }
+
+    .label1 i {
+        position: absolute;
+        right: 0;
+        top: 27px;
+    }
+
+.sex-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sex {
+    padding: 0 20px;
 }
 
 input {
@@ -66,13 +85,13 @@ input {
     width: 100%;
     margin-top: 5px;
     font-size: 16px;
-    padding-bottom: 5px;
+    /* padding-bottom: 5px; */
     border-bottom: 1px solid rgba(109, 93, 93, 0.4);
     text-align: center;
     font-family: 'Nunito', sans-serif;
 }
 
-input[type="submit"] {
+    input[type="submit"] {
         display: block;
         margin: 0 auto;
         width: 260px;
@@ -81,7 +100,7 @@ input[type="submit"] {
         color: #fff;
         font-size: 15px;
         cursor: pointer;
-}
+    }
 
 .submit {
     margin-top: 40px;
@@ -92,10 +111,10 @@ input[type="submit"] {
     background: -webkit-linear-gradient(45deg, #b5cac3, #11d362);
 }
 
-.submit:hover {
-    background: -webkit-linear-gradient(45deg, #b6d1d0, #21d1c2);
-    color: red;
-}
+    .submit:hover {
+        background: -webkit-linear-gradient(45deg, #b6d1d0, #21d1c2);
+        color: red;
+    }
 
 .forgot-password {
     margin-top: 40px;
@@ -106,9 +125,9 @@ input[type="submit"] {
     cursor: pointer;
 }
 
-.forgot-password:hover {
-    color: red;
-}
+    .forgot-password:hover {
+        color: red;
+    }
 
 .social-media {
     width: 100%;
@@ -120,20 +139,20 @@ input[type="submit"] {
     /*border-top: 1px rgba(0, 0, 0, .1);*/
 }
 
-.social-media ul li {
-    display: inline-block;
-    cursor: pointer;
-    margin: 25px 20px;
-}
+    .social-media ul li {
+        display: inline-block;
+        cursor: pointer;
+        margin: 25px 20px;
+    }
 
-.social-media i {
-    font-size: 3rem;
-    transition: color .5s;
-}
+    .social-media i {
+        font-size: 3rem;
+        transition: color .5s;
+    }
 
-.social-media i:hover {
-    color: red;
-}
+        .social-media i:hover {
+            color: red;
+        }
 
 .sub-cont {
     overflow: hidden;
@@ -165,28 +184,28 @@ input[type="submit"] {
     padding-top: 360px;
 }
 
-.img:before {
-    content: '';
-    position: absolute;
-    right: 0;
-    top: 0;
-    width: 900px;
-    height: 100%;
-    background-image: url('../image/account-back.jpg');
-    background-size: cover;
-    transition: -webkit-transform 1.2s ease-in-out;
-    transition: transform 1.2s ease-in-out, -webkit-transform 1.2s ease-in-out;
-}
+    .img:before {
+        content: '';
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 900px;
+        height: 100%;
+        background-image: url('../image/account-back.jpg');
+        background-size: cover;
+        transition: -webkit-transform 1.2s ease-in-out;
+        transition: transform 1.2s ease-in-out, -webkit-transform 1.2s ease-in-out;
+    }
 
-.img:after {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.3);
-}
+    .img:after {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.3);
+    }
 
 .cont.s-sign-up .img:before {
     -webkit-transform: translate3d(640px, 0, 0);
@@ -207,15 +226,15 @@ input[type="submit"] {
     transition: transform 1.2s ease-in-out, -webkit-transform 1.2s ease-in-out;
 }
 
-.img-text h2 {
-    margin-bottom: 10px;
-    font-weight: normal;
-}
+    .img-text h2 {
+        margin-bottom: 10px;
+        font-weight: normal;
+    }
 
-.img-text p {
-    font-size: 14px;
-    line-height: 1.5;
-}
+    .img-text p {
+        font-size: 14px;
+        line-height: 1.5;
+    }
 
 .cont.s-sign-up .img-text.m-up {
     -webkit-transform: translateX(520px);
@@ -261,39 +280,39 @@ input[type="submit"] {
     cursor: pointer;
 }
 
-.img-btn:after {
-    content: '';
-    z-index: 2;
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    border: 2px solid #fff;
-    border-radius: 30px;
-}
+    .img-btn:after {
+        content: '';
+        z-index: 2;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        border: 2px solid #fff;
+        border-radius: 30px;
+    }
 
-.img-btn span {
-    position: absolute;
-    left: 0;
-    top: 0;
-    display: -webkit-box;
-    display: flex;
-    -webkit-box-pack: center;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 100%;
-    -webkit-transition: -webkit-transform 1.2s;
-    transition: -webkit-transform 1.2s;
-    transition: transform 1.2s;
-    transition: transform 1.2, -webkit-transform 1.2s;
-}
+    .img-btn span {
+        position: absolute;
+        left: 0;
+        top: 0;
+        display: -webkit-box;
+        display: flex;
+        -webkit-box-pack: center;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        -webkit-transition: -webkit-transform 1.2s;
+        transition: -webkit-transform 1.2s;
+        transition: transform 1.2s;
+        transition: transform 1.2, -webkit-transform 1.2s;
+    }
 
-.img-btn span.m-in {
-    -webkit-transform: translateY(-72px);
-    transform: translateY(-72px);
-}
+        .img-btn span.m-in {
+            -webkit-transform: translateY(-72px);
+            transform: translateY(-72px);
+        }
 
 .cont.s-sign-up .img-btn span.m-in {
     -webkit-transform: translateY(0);

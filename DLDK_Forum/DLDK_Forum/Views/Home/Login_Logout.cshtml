@@ -21,11 +21,11 @@
         <div class="form sign-in">
             <h2>Đăng nhập</h2>
             <form action="/Home/Login" method="post">
-                <label>
+                <label class="label1">
                     <span>Email</span>
                     <input type="email" name="Email">
                 </label>
-                <label>
+                <label class="label1">
                     <span>Mật khẩu</span>
                     <input type="Password" name="MatKhau">
                 </label>
@@ -70,26 +70,45 @@
                     <span class="m-in">Đăng nhập</span>
                 </div>
             </div>
-            <div class="form sign-up">
-                <h2>Đăng ký</h2>
-                <label>
+            <form class="form sign-up" action="/Home/Register" method="post">
+                <h2>Đăng Ký</h2>
+                <label class="label1">
                     <span>Tên</span>
-                    <input type="name">
+                    <input type="name" name="HoTen">
                 </label>
-                <label>
+                <label class="label1">
                     <span>Email</span>
-                    <input type="email">
+                    <input type="email" name="Email">
                 </label>
-                <label>
+                <label class="label1">
                     <span>Mật khẩu</span>
-                    <input type="password">
+                    <input type='text' id="password" name="MatKhau">
+                    <i class="far fa-eye" id="togglePassword"></i>
+                    <!-- <i class="far fa-eye-slash"></i> -->
                 </label>
-                <label>
-                    <span>Nhập lại mật khẩu</span>
-                    <input type="password">
+                <label class="label1">
+                    <span>Ảnh đại diện</span>
+                    <input type="file">
                 </label>
-                <button type="button" class="submit">Đăng ký</button>
-            </div>
+                <label class="label1">
+                    <span>slogan</span>
+                    <input type="text" name="MoTa">
+                </label>
+                <label class="label1">
+                    <span>giới tính </span>
+                    <div class="sex-container">
+                        <div class="sex">
+                            <input type="radio" name="GioiTinh" id="nam" value="nam">
+                            <label for="nam">Nam</label>
+                        </div>
+                        <div class="sex">
+                            <input type="radio" name="GioiTinh" id="nu" value="nu">
+                            <label for="nu">Nữ</label>
+                        </div>
+                    </div>
+                </label>
+                <input type="submit" class="submit" name="" value="Đăng ký">
+            </form>
         </div>
     </div>
 
