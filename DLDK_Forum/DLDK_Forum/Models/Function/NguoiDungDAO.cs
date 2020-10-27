@@ -42,5 +42,18 @@ namespace DLDK_Forum.Models.Function
                 return false;
             }
         }
+        public List<string> Emails()
+        {
+            List<string> E = new List<string>();
+            foreach(var item in a.NguoiDungs)
+            {
+                E.Add(item.Email);
+            }
+            return E;
+        }
+        public int count()
+        {
+            return a.NguoiDungs.Count();
+        }
     }
 }

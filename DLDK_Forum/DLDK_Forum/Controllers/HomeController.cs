@@ -6,6 +6,8 @@ using System.Web.Mvc;
 using DLDK_Forum.Models;
 using DLDK_Forum.Models.N_models;
 using DLDK_Forum.Models.Function;
+using System.IO;
+
 namespace DLDK_Forum.Controllers
 {
     public class HomeController : Controller
@@ -33,10 +35,39 @@ namespace DLDK_Forum.Controllers
             } 
         }
         [HttpPost]
-        public ActionResult Register(NguoiDung model)
+        public ActionResult Register(NguoiDung model,HttpPostedFileBase file)
         {
-                return RedirectToAction("Login_Logout");
+            NguoiDungDAO DAO = new NguoiDungDAO();
+            NguoiDung ND = new NguoiDung();
 
+            if(DAO.Emails().Where(s => s == model.Email).Count() > 0)
+            {
+                TempData["ErrorRegis"] = "Email đã được sử dụng";
+                return RedirectToAction("Login_Logout");
+            }
+            else {
+                ND.Email = model.Email;
+                ND.HoTen = model.HoTen;
+                ND.MatKhau = model.MatKhau;
+                ND.MoTa = model.MoTa;
+                ND.QuyenAdmin = 0;
+                ND.GioiTinh = model.GioiTinh;
+                if (file != null && file.ContentLength > 0)
+                {
+                    string filename = Path.GetFileName(file.FileName);
+                    string imgpath = Path.Combine(Server.MapPath("~/images/"), filename);
+                    file.SaveAs(imgpath);
+                    ND.AnhDaiDien = "images/" + file.FileName;
+                }
+                else
+                {
+                    ND.AnhDaiDien = "images/avt_default.jpg";
+                }
+                TempData["ErrorRegis"] = "Đăng ký thành công";
+                MyDBContext.NguoiDungs.Add(ND);
+                MyDBContext.SaveChanges();
+                return RedirectToAction("Login_Logout"); 
+            }
         }
 
         public ActionResult Contact()

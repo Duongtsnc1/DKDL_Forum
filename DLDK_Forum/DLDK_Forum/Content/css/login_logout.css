@@ -13,6 +13,10 @@ body {
     justify-content: center;
     align-items: center;
     font-family: 'Nunito', sans-serif;
+    background: url("../image/s.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 input,
