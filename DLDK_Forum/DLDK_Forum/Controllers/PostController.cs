@@ -39,7 +39,7 @@ namespace DLDK_Forum.Controllers
         public ActionResult dangbai(BaiViet BV,HttpPostedFileBase file)
         {
             BaiVietDAO DAO = new BaiVietDAO();
-            BV.Email = "duongphuongnam1@gmail.com";
+            BV.Email = "user1@gmail.com";
             BV.TinhTrang = 1;
             BV.ThoiGian = DateTime.Now;
             BV.MaBaiViet = DAO.BaiMoi();
