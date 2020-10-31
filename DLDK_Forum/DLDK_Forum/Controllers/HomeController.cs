@@ -100,7 +100,7 @@ namespace DLDK_Forum.Controllers
             {
                 ViewBag.mes = "Hãy điền đầy đủ thông tin! Cảm ơn bạn";
             }
-            return View("Contact");
+            return Redirect("/");
         }
         public ActionResult About()
         {
@@ -131,9 +131,7 @@ namespace DLDK_Forum.Controllers
         }
         public ActionResult tesst()
         {
-            
             return View();
-
         }
     }
 }
