@@ -1,5 +1,5 @@
 ﻿@model DLDK_Forum.Models.NguoiDung
-
+@using DLDK_Forum.Models
 @{
     Layout = null;
     var Thich = 0;
@@ -43,15 +43,22 @@
 
     <div class="account">
         <div class="back-image">
-            <div class="btn-container">
-                <a href="/Post/NewPost" class="btn">VIẾT BÀI MỚI</a>
-            </div>
+            @if (Session["User"] != null && ((NguoiDung)Session["User"]).Email == Model.Email)
+            {
+                <div class="btn-container">
+                 <a href="/Post/NewPost" class="btn">VIẾT BÀI MỚI</a>
+             </div>
+            }   
             <div class="btn-container">
                 <a href="/Home/Home" class="btn">Trang chủ</a>
             </div>
-            <div class="btn-container">
-                <a href="" class="btn">Quản lý(admin)</a>
-            </div>
+            @if (Session["User"] != null && ((NguoiDung)Session["User"]).QuyenAdmin == 1)
+            {
+                <div class="btn-container">
+                    <a href="" class="btn">Quản lý(admin)</a>
+                </div>
+            }
+
         </div>
         <div class="info-container">
             <div class="info">
@@ -140,7 +147,7 @@
                                 </div>
                             </div>
                             <div class="author">
-                                <img src="~/images/avt.jpg" alt="">
+                                <img src="~/@Model.AnhDaiDien" alt="">
                                 <h4>@item.NguoiDung.HoTen</h4>
                             </div>
                             <div class="description">
@@ -165,8 +172,6 @@
                         </div>
                     </div>
                 }
-
-
             </div>
             <!-- <div class="col-3">
                 <div class="table-content">

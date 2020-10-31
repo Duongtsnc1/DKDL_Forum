@@ -25,14 +25,21 @@ namespace DLDK_Forum.Controllers
             var result = DAO.login(model.Email, model.MatKhau);
             if (result == true)
             {
+                var user = DAO.GetUser(model.Email);
+                Session["User"] = user;
                 ViewBag.mes = "Thành công";
                 return RedirectToAction("Home");
             }
             else
             {
-                TempData["Error"] = "Tài Khoản Hoặc Mật Khẩu Không Đúng!!!!!!";
+                TempData["Error_login"] = "Tài Khoản Hoặc Mật Khẩu Không Đúng!!!!!!";
                 return RedirectToAction("Login_Logout");
             } 
+        }
+        public ActionResult Logout()
+        {
+            Session["User"] = null;
+            return Redirect("/");
         }
         [HttpPost]
         public ActionResult Register(NguoiDung model,HttpPostedFileBase file)
@@ -42,7 +49,7 @@ namespace DLDK_Forum.Controllers
 
             if(DAO.Emails().Where(s => s == model.Email).Count() > 0)
             {
-                TempData["ErrorRegis"] = "Email đã được sử dụng";
+                TempData["Error_Res"] = "Email đã được sử dụng";
                 return RedirectToAction("Login_Logout");
             }
             else {
@@ -63,7 +70,7 @@ namespace DLDK_Forum.Controllers
                 {
                     ND.AnhDaiDien = "images/avt_default.jpg";
                 }
-                TempData["ErrorRegis"] = "Đăng ký thành công";
+                TempData["Error_Res"] = "Đăng ký thành công";
                 MyDBContext.NguoiDungs.Add(ND);
                 MyDBContext.SaveChanges();
                 return RedirectToAction("Login_Logout"); 
@@ -93,7 +100,7 @@ namespace DLDK_Forum.Controllers
             {
                 ViewBag.mes = "Hãy điền đầy đủ thông tin! Cảm ơn bạn";
             }
-            return View("Contact");
+            return Redirect("/");
         }
         public ActionResult About()
         {
@@ -124,9 +131,7 @@ namespace DLDK_Forum.Controllers
         }
         public ActionResult tesst()
         {
-            
             return View();
-
         }
     }
 }

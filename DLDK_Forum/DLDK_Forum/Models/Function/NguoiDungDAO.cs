@@ -55,5 +55,9 @@ namespace DLDK_Forum.Models.Function
         {
             return a.NguoiDungs.Count();
         }
+        public NguoiDung GetUser(string id)
+        {
+            return a.NguoiDungs.Find(id);
+        }
     }
 }
