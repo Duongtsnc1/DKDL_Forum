@@ -1,4 +1,5 @@
-﻿<header>
+﻿@using DLDK_Forum.Models
+<header>
     <div class="container">
         <div class="header-container">
             <img src="~/Content/image/logo.png" id="logo" alt="">
@@ -14,11 +15,33 @@
                         <a href="/Home/About">Giới thiệu</a>
                     </li>
                     <li>
-                        <a href="#">Manage(admin)</a>
+                        <a href="/Post/ListPost?idChuDe=">Chủ đề</a>
                     </li>
-                    <li>
-                        <a href="/Home/Login_Logout">Đăng nhập</a>
-                    </li>
+                    @{
+                        var user = (NguoiDung)Session["User"];
+                    }
+                    @if (user != null && user.QuyenAdmin == 1)
+                    {
+                        <li>
+                            <a href="#">Manage(admin)</a>
+                        </li>
+                    }
+                    @if (user != null)
+                    {
+                        <li>
+                            <a href="/Home/Account?idAccount=@user.Email">@user.HoTen</a>
+                        </li>
+                        <li>
+                            <a href="/Home/Logout">Đăng xuất</a>
+                        </li>
+                    }
+                    else
+                    {
+                        <li>
+                            <a href="/Home/Login_Logout">Đăng nhập</a>
+                        </li>
+                    }
+
                 </ul>
             </div>
         </div>

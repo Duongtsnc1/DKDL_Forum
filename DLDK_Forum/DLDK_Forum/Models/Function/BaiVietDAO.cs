@@ -46,6 +46,19 @@ namespace DLDK_Forum.Models.Function
             NDBV.Reverse();
             return NDBV;
         }
-
+        public string BaiMoi()
+        {
+            List<int> list = new List<int>();
+            foreach (var item in a.BaiViets)
+            {
+                list.Add(Convert.ToInt32(item.MaBaiViet.Substring(2)));
+            }
+            int index = 1;
+            while (list.IndexOf(index) != -1)
+            {
+                index++;
+            }
+            return "BV" + index.ToString();
+        }
     }
 }

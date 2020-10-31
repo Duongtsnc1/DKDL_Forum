@@ -18,7 +18,7 @@
 
 <body>
     
-    <div class="title_container">
+    <div class="title_container" style="background:url(/@Model.DuongDanHinhAnh);background-position: center;background-size: cover;background-repeat: no-repeat;background-attachment: fixed;">
         @Html.Partial("~/Views/Shared/header.cshtml")
         <div class="title">
             <div class="title1">
@@ -39,31 +39,31 @@
                 <br>
                 <hr>
                 <div class="comment-container">
-                    <div class="post-react">
+                    <form class="post-react" action="/Post/bieucam?MaBaiViet=@Model.MaBaiViet" method="post">
                         @{
                             var Thich = Model.CamXucs.Where(s => s.Thich == 1).Count();
                             var KThich = Model.CamXucs.Where(s => s.Thich == 0).Count();
                             var BinhLuan = Model.BinhLuans.Count();
                         }
-                        <div class="i-container"><i class="far fa-thumbs-up"></i><span>@Thich</span> </div>
-                        <div class="i-container"><i class="far fa-thumbs-down"></i> <span>@KThich</span></div>
+                        <button type="submit" value="1" name="thich" class="i-container"><i class="far fa-thumbs-up"></i><span>@Thich</span></button>
+                        <button type="submit" value="0" name="thich" class="i-container"><i class="far fa-thumbs-down"></i><span>@KThich</span></button>
                         <div class="i-container"><i class="far fa-comment"></i><span>@BinhLuan</span></div>
-                    </div>
+                    </form>
                     <div class="count-container">
                         <p>@Model.BinhLuans.Count() Bình luận</p>
                     </div>
                     <ul>
-                        @foreach (var item in Model.BinhLuans)
+                        @foreach (var item in Model.BinhLuans.OrderBy(s=>s.ThoiGian))
                         {
                             <li class="comment">
                                 <div class="avt-user">
-                                    <img src="~/images/avt.jpg" alt="">
+                                    <img src="~/@item.NguoiDung.AnhDaiDien" alt="">
                                 </div>
                                 <div class="comment-body">
                                     <h4>@item.NguoiDung.HoTen</h4>
                                     <span>@item.ThoiGian.ToString()</span>
                                     <p>@item.NoiDung</p>
-                                    <p class="btn">Trả lời</p>
+                                    @*<p class="btn">Trả lời</p>*@
                                 </div>
                             </li>
                         }
@@ -71,13 +71,14 @@
                     <hr>
                     <div class="new-comment">
                         <h4>Thêm bình luận</h4>
-                        <div class="message-container">
-                            <textarea name="message" id="" cols="100" rows="20"></textarea>
-
-                        </div>
-                        <div class="btn-container">
-                            <a href="" class="btn-add">Thêm</a>
-                        </div>
+                        <form action="/Post/binhluan?idPost=@Model.MaBaiViet" method="post">
+                            <div class="message-container">
+                                <textarea name="NoiDung" cols="100" rows="20"></textarea>
+                            </div>
+                            <div class="btn-container">
+                                <input type="submit" class="btn-add" value="Thêm">
+                            </div>
+                        </form>
                     </div>
                 </div>
             </div>

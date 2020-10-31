@@ -6,6 +6,8 @@ using System.Web.Mvc;
 using DLDK_Forum.Models;
 using DLDK_Forum.Models.N_models;
 using DLDK_Forum.Models.Function;
+using System.IO;
+
 namespace DLDK_Forum.Controllers
 {
     public class HomeController : Controller
@@ -23,20 +25,56 @@ namespace DLDK_Forum.Controllers
             var result = DAO.login(model.Email, model.MatKhau);
             if (result == true)
             {
+                var user = DAO.GetUser(model.Email);
+                Session["User"] = user;
                 ViewBag.mes = "Thành công";
                 return RedirectToAction("Home");
             }
             else
             {
-                TempData["Error"] = "Tài Khoản Hoặc Mật Khẩu Không Đúng!!!!!!";
+                TempData["Error_login"] = "Tài Khoản Hoặc Mật Khẩu Không Đúng!!!!!!";
                 return RedirectToAction("Login_Logout");
             } 
         }
-        [HttpPost]
-        public ActionResult Register(NguoiDung model)
+        public ActionResult Logout()
         {
-                return RedirectToAction("Login_Logout");
+            Session["User"] = null;
+            return Redirect("/");
+        }
+        [HttpPost]
+        public ActionResult Register(NguoiDung model,HttpPostedFileBase file)
+        {
+            NguoiDungDAO DAO = new NguoiDungDAO();
+            NguoiDung ND = new NguoiDung();
 
+            if(DAO.Emails().Where(s => s == model.Email).Count() > 0)
+            {
+                TempData["Error_Res"] = "Email đã được sử dụng";
+                return RedirectToAction("Login_Logout");
+            }
+            else {
+                ND.Email = model.Email;
+                ND.HoTen = model.HoTen;
+                ND.MatKhau = model.MatKhau;
+                ND.MoTa = model.MoTa;
+                ND.QuyenAdmin = 0;
+                ND.GioiTinh = model.GioiTinh;
+                if (file != null && file.ContentLength > 0)
+                {
+                    string filename = Path.GetFileName(file.FileName);
+                    string imgpath = Path.Combine(Server.MapPath("~/images/"), filename);
+                    file.SaveAs(imgpath);
+                    ND.AnhDaiDien = "images/" + file.FileName;
+                }
+                else
+                {
+                    ND.AnhDaiDien = "images/avt_default.jpg";
+                }
+                TempData["Error_Res"] = "Đăng ký thành công";
+                MyDBContext.NguoiDungs.Add(ND);
+                MyDBContext.SaveChanges();
+                return RedirectToAction("Login_Logout"); 
+            }
         }
 
         public ActionResult Contact()

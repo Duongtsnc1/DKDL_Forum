@@ -14,7 +14,7 @@
             @foreach (var item in Model)
             {
                 <div class="single-box" onclick="window.open('/Home/Account?idAccount=@item.ID.Email','_self')">
-                    <div class=" header-area img1 " style="background-image: url('/images/avt.jpg');"></div>
+                    <div class=" header-area img1 " style="background-image: url('/@item.ID.AnhDaiDien');"></div>
                     <div class="body-area ">
                         <h3>@item.ID.HoTen</h3>
                         <p>

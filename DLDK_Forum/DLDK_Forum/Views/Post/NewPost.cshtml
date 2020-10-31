@@ -20,39 +20,36 @@
         <div class="container1">
             <h1>Viết nên trải nghiệm của bạn</h1>
             <p>“Một khi bị nhiễm niềm đam mê du lịch, chẳng có phương thuốc nào có thể hóa giải, và tôi biết rằng tôi sẽ hạnh phúc khi có căn bệnh này cho đến hết cuộc đời.”</p>
-            <ul>
-                <li>
+            <form action="/Post/dangbai" method="post" enctype="multipart/form-data">
+                <ul>
+                    <li>
 
-                    <select name="topic" id="topics">
-                        <option value="0">Chủ đề...</option>
-                        <option value="1">Hà Nội</option>
-                        <option value="2">Thành Phố Hồ Chí Minh</option>
-                        <option value="3">Sapa</option>
-                        <option value="4">Miền Tây</option>
-                        <option value="5">Nha Trang</option>
-                        <option value="6">Đà Lạt</option>
-                        <option value="7">Huế-Đà Nẵng-Quảng Nam</option>
-                        <option value="8">Phú Quốc</option>
-                        <option value="9">Ninh Bình</option>
-                        <option value="10">Khác</option>
-                    </select>
-
-                </li>
-                <li>
-                    <label for="title">Tiêu đề</label> <input type="text" name="title">
-                </li>
-                <li>
-                    <label for="sub-title">Tiêu đề con</label> <input type="text" name="sub-title">
-
-                </li>
-                <li>
-                    <label for="image-post">Ảnh(url)</label> <input type="text" name="image-post">
-                </li>
-                <li>
-                    <label for="content">Nội dung</label> <textarea name="content" id="" cols="30" rows="10"></textarea>
-                </li>
-            </ul>
-            <a href="" class="btn">Thêm </a>
+                        <select name="MaChuDe" id="topics" required>
+                            <option value="">Chủ đề...</option>
+                            <option value="CD02">Hà Nội</option>
+                            <option value="CD07">Thành Phố Hồ Chí Minh</option>
+                            <option value="CD01">Sapa</option>
+                            <option value="CD08">Miền Tây</option>
+                            <option value="CD05">Nha Trang</option>
+                            <option value="CD06">Đà Lạt</option>
+                            <option value="CD04">Huế-Đà Nẵng-Quảng Nam</option>
+                            <option value="CD09">Phú Quốc</option>
+                            <option value="CD03">Ninh Bình</option>
+                            <option value="CD00">Khác</option>
+                        </select>
+                    </li>
+                    <li>
+                        <label for="title">Tiêu đề</label> <input type="text" name="TieuDe" required>
+                    </li>
+                    <li>
+                        <label for="image-post">Ảnh</label> <input type="file" name="file">
+                    </li>
+                    <li>
+                        <label for="content">Nội dung</label> <textarea name="Noidung" id="" cols="30" rows="20" required></textarea>
+                    </li>
+                </ul>
+                <input type="submit" value="Thêm" class="btn">
+            </form>
         </div>
 
     </div>
