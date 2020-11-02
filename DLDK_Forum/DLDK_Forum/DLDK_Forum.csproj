@@ -155,8 +155,11 @@
     <Compile Include="Models\CamXuc.cs" />
     <Compile Include="Models\ChuDe.cs" />
     <Compile Include="Models\Function\BaiVietDAO.cs" />
+    <Compile Include="Models\Function\CamXucDAO.cs" />
     <Compile Include="Models\Function\ChuDeDAO.cs" />
+    <Compile Include="Models\Function\imagesDAO.cs" />
     <Compile Include="Models\Function\NguoiDungDAO.cs" />
+    <Compile Include="Models\images.cs" />
     <Compile Include="Models\MyDB.cs" />
     <Compile Include="Models\NguoiDung.cs" />
     <Compile Include="Models\N_models\HotPost.cs" />
@@ -3738,7 +3741,6 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
-    <Content Include="images\Ha_long_1.jpg" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Content\fontawesome-free-5.14.0-web\less\brands.less" />
@@ -3795,11 +3797,6 @@
     <Content Include="Content\fontawesome-free-5.14.0-web\webfonts\fa-solid-900.ttf" />
     <Content Include="Content\fontawesome-free-5.14.0-web\webfonts\fa-solid-900.woff" />
     <Content Include="Content\fontawesome-free-5.14.0-web\webfonts\fa-solid-900.woff2" />
-    <Content Include="Areas\Admin\Views\web.config" />
-    <Content Include="Areas\Admin\Views\_ViewStart.cshtml" />
-    <Content Include="Areas\Admin\Views\Shared\_Layout.cshtml" />
-    <Content Include="Areas\Admin\Views\Shared\_LayoutQuanLy.cshtml" />
-    <Content Include="Areas\Admin\Views\QuanLy\QuanLyBaiViet.cshtml" />
     <Content Include="Content\plugins\bootstrap-colorpicker\css\bootstrap-colorpicker.css.map" />
     <Content Include="Content\plugins\bootstrap-colorpicker\css\bootstrap-colorpicker.min.css.map" />
     <Content Include="Content\plugins\bootstrap-colorpicker\js\bootstrap-colorpicker.js.map" />
@@ -3877,8 +3874,6 @@
     <Content Include="Content\dist\js\.eslintrc.json" />
     <Content Include="Content\dist\js\adminlte.js.map" />
     <Content Include="Content\dist\js\adminlte.min.js.map" />
-    <Content Include="Areas\Admin\Views\QuanLy\QuanLyNguoiDung.cshtml" />
-    <Content Include="Areas\Admin\Views\QuanLy\QuanLyPhanHoi.cshtml" />
     <Content Include="Areas\Admin\Views\BaiViets\Create.cshtml" />
     <Content Include="Areas\Admin\Views\BaiViets\Delete.cshtml" />
     <Content Include="Areas\Admin\Views\BaiViets\Details.cshtml" />
@@ -3889,6 +3884,14 @@
     <Content Include="Areas\Admin\Views\NguoiDungs\Details.cshtml" />
     <Content Include="Areas\Admin\Views\NguoiDungs\Edit.cshtml" />
     <Content Include="Areas\Admin\Views\NguoiDungs\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\QuanLy\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\QuanLy\QuanLyBaiViet.cshtml" />
+    <Content Include="Areas\Admin\Views\QuanLy\QuanLyNguoiDung.cshtml" />
+    <Content Include="Areas\Admin\Views\QuanLy\QuanLyPhanHoi.cshtml" />
+    <Content Include="Areas\Admin\Views\Shared\_Layout.cshtml" />
+    <Content Include="Areas\Admin\Views\Shared\_LayoutQuanLy.cshtml" />
+    <Content Include="Areas\Admin\Views\web.config" />
+    <Content Include="Areas\Admin\Views\_ViewStart.cshtml" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
@@ -3930,6 +3933,7 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Areas\Admin\Data\" />
+    <Folder Include="images\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
